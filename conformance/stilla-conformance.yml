@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.stilla.ai/.well-known/oauth-authorization-server
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Publishes RFC 8414 authorization-server metadata at api.stilla.ai/.well-known/oauth-authorization-server
+  - id: oidc
+    conforms: true
+    evidence: OIDC discovery document at login.stilla.ai/.well-known/openid-configuration; openid scope supported
+  - id: rfc8414-oauth-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns full metadata (200)
+  - id: rfc9728-protected-resource-metadata
+    conforms: true
+    evidence: /.well-known/oauth-protected-resource/mcp declares resource + authorization_servers
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint present; client_id_metadata_document_supported true
+  - id: rfc8628-device-authorization-grant
+    conforms: true
+    evidence: device_authorization_endpoint + urn:ietf:params:oauth:grant-type:device_code grant supported
+  - id: pkce
+    conforms: true
+    evidence: code_challenge_methods_supported includes S256
+  - id: mcp-model-context-protocol
+    conforms: true
+    evidence: Published streamable-HTTP MCP server at api.stilla.ai/mcp with OAuth resource metadata
+  - id: scim2
+    conforms: true
+    evidence: SCIM provisioning documented for enterprise tenants (stilla.ai/security)
+  - id: saml2
+    conforms: true
+    evidence: SAML SSO documented for enterprise tenants (stilla.ai/security)
+compliance:
+  # Published certifications / compliance posture (stilla.ai/security + trust.stilla.ai)
+  - program: SOC 2 Type II
+    status: certified
+    evidence: "Independently audited, zero findings, zero exceptions (stilla.ai/security)"
+  - program: GDPR
+    status: compliant
+    evidence: EU/EEA data processing with DPA; EU data residency
+  - program: CASA Tier 2
+    status: certified
+    evidence: Google App Defense Alliance security assessment, certified Tier 2
+source_compliance: https://stilla.ai/security

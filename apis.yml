@@ -1,7 +1,16 @@
 aid: stilla
 name: Stilla
-description: Stilla is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Stilla is an AI teammate for the whole company — an AI agent that connects to a team's
+  tools (Slack, Microsoft Teams, GitHub, Linear, Notion, Google Workspace and 3,000+ more)
+  and turns chats, meetings, and conversations into finished work: ads, code, reports,
+  tasks, and documents. Team members mention @Stilla to delegate work, and reusable agents
+  configured in natural language search across connected tools, take actions, transcribe
+  meetings, and persist context in collaborative canvases. Stilla exposes a REST API and an
+  official remote Model Context Protocol (MCP) server so external AI tools (Claude Code,
+  Cursor, and other MCP clients) can access a workspace's notes, decisions, and workflow
+  outputs. Built by the team behind Shop Pay at Shopify, Stilla is SOC 2 Type II certified,
+  GDPR compliant, and CASA Tier 2 assessed. Backed by General Catalyst.
 url: https://raw.githubusercontent.com/api-evangelist/stilla/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +18,119 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://stilla.ai/favicon.svg
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- AI Agents
+- Agentic
+- Productivity
+- Collaboration
+- MCP
+- Automation
+- Developer Tools
+- Enterprise
+apis:
+- name: Stilla API
+  description: >-
+    Programmatic access to Stilla's capabilities. The REST API and the remote MCP server
+    are protected by OAuth 2.0 / OIDC (WorkOS AuthKit). The OpenAPI document is served at
+    api.stilla.ai/openapi.json but is gated behind authentication.
+  humanURL: https://stilla.ai/docs
+  baseURL: https://api.stilla.ai
+  tags:
+  - AI Agents
+  - MCP
+  properties:
+  - type: MCPServer
+    url: mcp/stilla-mcp.yml
+  - type: Authentication
+    url: authentication/stilla-authentication.yml
+  - type: OAuthScopes
+    url: scopes/stilla-scopes.yml
+  - type: WellKnown
+    url: well-known/stilla-well-known.yml
+common:
+- type: DeveloperPortal
+  url: https://stilla.ai/docs
+- type: Documentation
+  url: https://stilla.ai/docs
+- type: GettingStarted
+  url: https://stilla.ai/docs/getting-started
+- type: Support
+  url: https://stilla.ai/docs/support
+- type: Blog
+  url: https://stilla.ai/blog
+- type: ChangeLog
+  url: changelog/stilla-changelog.yml
+- type: ChangeLog
+  name: Changelog (site)
+  url: https://stilla.ai/changelog
+- type: StatusPage
+  url: https://status.stilla.ai
+- type: Pricing
+  url: https://stilla.ai/#pricing
+- type: SignUp
+  url: https://app.stilla.ai
+- type: Login
+  url: https://app.stilla.ai
+- type: TermsOfService
+  url: https://stilla.ai/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://stilla.ai/legal/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/stilla
+- type: LinkedIn
+  url: https://www.linkedin.com/company/stillaai
+- type: MCPServer
+  url: mcp/stilla-mcp.yml
+- type: Authentication
+  url: authentication/stilla-authentication.yml
+- type: OAuthScopes
+  url: scopes/stilla-scopes.yml
+- type: WellKnown
+  url: well-known/stilla-well-known.yml
+- type: SecurityTxt
+  name: OAuth protected-resource + authorization-server metadata
+  url: well-known/stilla-well-known.yml
+- type: LLMsTxt
+  url: llms/stilla-llms.txt
+- type: Conformance
+  url: conformance/stilla-conformance.yml
+- type: Compliance
+  url: https://stilla.ai/security
+- type: TrustCenter
+  url: security/stilla-trust-center.yml
+- type: Trust
+  url: https://trust.stilla.ai
+- type: Lifecycle
+  url: lifecycle/stilla-lifecycle.yml
+- type: Conventions
+  url: conventions/stilla-conventions.yml
+- type: DomainSecurity
+  url: security/stilla-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

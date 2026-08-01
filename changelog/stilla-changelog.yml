@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://stilla.ai/changelog
+scheme: dated              # date-headed product changelog, no semantic version numbers
+url: https://stilla.ai/changelog
+entries:
+  - date: '2026-07-10'
+    title: Superlist MCP server
+    highlights: >-
+      Connect Superlist to create, find, update, complete, and organize tasks and lists
+      directly from Stilla; turn meeting notes or project briefs into structured plans.
+    breaking: false
+  - date: '2026-07-01'
+    title: Claude Sonnet 5 default
+    highlights: >-
+      Anthropic's Claude Sonnet 5 becomes Stilla's new default model for planning,
+      tool use, and multi-step work.
+    breaking: false
+  - date: '2026-06-29'
+    title: OpenRouter MCP server
+    highlights: OpenRouter added as an MCP server integration.
+    breaking: false
+notes: >-
+  Recent-window capture of the public changelog. Stilla's release cadence is heavily
+  integration- and model-driven (new MCP servers, model defaults). See the live page for
+  the full history.

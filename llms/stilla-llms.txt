@@ -1,0 +1,129 @@
+# Stilla Documentation
+
+> Stilla is an AI agent that quietly keeps track of everything — what was said, what needs doing, and what's already in motion.
+
+This file provides LLM-friendly access to Stilla's documentation.
+
+## Documentation Pages
+
+### Docs introduction
+Learn how to use Stilla, the AI agent that keeps track of everything.
+- HTML: https://stilla.ai/docs
+- Markdown: https://stilla.ai/docs/index.md
+
+### Agents Overview
+Reusable AI automations configured with natural language.
+- HTML: https://stilla.ai/docs/agents/overview
+- Markdown: https://stilla.ai/docs/agents/overview.md
+
+### Canvases
+Rich, collaborative documents where your team and AI work together.
+- HTML: https://stilla.ai/docs/basics/canvases
+- Markdown: https://stilla.ai/docs/basics/canvases.md
+
+### Getting Started
+Set up Stilla and start tracking your work in minutes.
+- HTML: https://stilla.ai/docs/getting-started
+- Markdown: https://stilla.ai/docs/getting-started.md
+
+### Integrations Overview
+Connect your tools so Stilla can search, act, and stay in sync.
+- HTML: https://stilla.ai/docs/integrations/overview
+- Markdown: https://stilla.ai/docs/integrations/overview.md
+
+### How Stilla Handles the "Lethal Trifecta"
+How Stilla mitigates prompt injection risks from combining private data access, untrusted content, and external communication.
+- HTML: https://stilla.ai/docs/security/lethal-trifecta
+- Markdown: https://stilla.ai/docs/security/lethal-trifecta.md
+
+### Creating Agents
+Build your first agent with natural language instructions.
+- HTML: https://stilla.ai/docs/agents/creating-agents
+- Markdown: https://stilla.ai/docs/agents/creating-agents.md
+
+### Chat
+Talk to Stilla in real time — as a team.
+- HTML: https://stilla.ai/docs/basics/chat
+- Markdown: https://stilla.ai/docs/basics/chat.md
+
+### Slack
+Chat with Stilla in Slack, send messages, and automate channel workflows.
+- HTML: https://stilla.ai/docs/integrations/slack
+- Markdown: https://stilla.ai/docs/integrations/slack.md
+
+### Triggers
+Schedule agents or trigger them from Slack, GitHub, and Linear.
+- HTML: https://stilla.ai/docs/agents/triggers
+- Markdown: https://stilla.ai/docs/agents/triggers.md
+
+### Folders
+Organize canvases into structured groups with granular permissions.
+- HTML: https://stilla.ai/docs/basics/folders
+- Markdown: https://stilla.ai/docs/basics/folders.md
+
+### Linear
+Create issues, track projects, and manage work from Stilla.
+- HTML: https://stilla.ai/docs/integrations/linear
+- Markdown: https://stilla.ai/docs/integrations/linear.md
+
+### Agent Restrictions
+Control exactly what each agent can access and modify.
+- HTML: https://stilla.ai/docs/agents/restrictions
+- Markdown: https://stilla.ai/docs/agents/restrictions.md
+
+### Meetings & transcription
+Transcribe meetings, extract change proposals, and keep your team aligned.
+- HTML: https://stilla.ai/docs/basics/meetings
+- Markdown: https://stilla.ai/docs/basics/meetings.md
+
+### GitHub
+Manage issues, review PRs, search code, and automate development workflows.
+- HTML: https://stilla.ai/docs/integrations/github
+- Markdown: https://stilla.ai/docs/integrations/github.md
+
+### Agent Memory
+Persist information across agent runs with memory canvases.
+- HTML: https://stilla.ai/docs/agents/memory
+- Markdown: https://stilla.ai/docs/agents/memory.md
+
+### Notion
+Search, read, and update your Notion workspace from Stilla.
+- HTML: https://stilla.ai/docs/integrations/notion
+- Markdown: https://stilla.ai/docs/integrations/notion.md
+
+### Coding Agents
+Fix bugs, implement features, and write PRs with AI.
+- HTML: https://stilla.ai/docs/agents/coding-agents
+- Markdown: https://stilla.ai/docs/agents/coding-agents.md
+
+### Google Workspace
+Calendar, Drive, and Gmail — all connected through one account.
+- HTML: https://stilla.ai/docs/integrations/google
+- Markdown: https://stilla.ai/docs/integrations/google.md
+
+### MCP (Model Context Protocol)
+Connect any external tool to Stilla through the open MCP standard.
+- HTML: https://stilla.ai/docs/integrations/mcp
+- Markdown: https://stilla.ai/docs/integrations/mcp.md
+
+### Stilla MCP
+Access your Stilla workspace from Claude Code, Cursor, and other MCP-compatible tools.
+- HTML: https://stilla.ai/docs/integrations/stilla-mcp
+- Markdown: https://stilla.ai/docs/integrations/stilla-mcp.md
+
+### FAQ
+Frequently asked questions about Stilla.
+- HTML: https://stilla.ai/docs/faq
+- Markdown: https://stilla.ai/docs/faq.md
+
+### Support
+Get help, join the community, or contact our team.
+- HTML: https://stilla.ai/docs/support
+- Markdown: https://stilla.ai/docs/support.md
+
+## Full Documentation
+
+For full documentation with all context, see: https://stilla.ai/llms-full.txt
+
+---
+Generated: 2026-07-21T08:22:26.449Z

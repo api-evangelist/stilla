@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://stilla.ai/docs/integrations/stilla-mcp
+server:
+  name: stilla
+  transport: http           # streamable HTTP remote MCP server
+  url: https://api.stilla.ai/mcp
+  auth:
+    type: oauth2
+    protected_resource: https://api.stilla.ai/.well-known/oauth-protected-resource/mcp
+    authorization_server: https://login.stilla.ai/
+    bearer_methods_supported: [header]
+    dynamic_client_registration: true
+docs: https://stilla.ai/docs/integrations/stilla-mcp
+description: >-
+  Official remote MCP server that gives MCP-compatible clients (Claude Code, Cursor,
+  Claude Desktop, etc.) authenticated access to a Stilla workspace — meeting notes,
+  decisions, canvases, transcripts, agent outputs and workflow runs. OAuth is required;
+  clients register dynamically and obtain tokens on first connect.
+capabilities:
+  # Documented capability areas (exact tool names require an authenticated session to enumerate).
+  - name: search_workspace
+    description: Find canvases, meeting notes, and agent outputs by topic or keyword.
+  - name: read_meeting_notes
+    description: Access full notes, summaries, transcripts, and recordings from any meeting.
+  - name: pull_coding_context
+    description: Retrieve decisions, specs, and action items while writing code.
+  - name: inspect_workflow_outputs
+    description: Access workflow runs, agent memory, and synthesis canvases.
+notes: >-
+  Verified live: POST https://api.stilla.ai/mcp returns a JSON-RPC invalid_token error
+  instructing clients to (re)register and obtain tokens, confirming an authenticated
+  streamable-HTTP MCP endpoint. Tool list is not enumerable unauthenticated, so the
+  entries above are the documented capability areas, not fabricated tool schemas.

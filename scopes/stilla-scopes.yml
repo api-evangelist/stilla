@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.stilla.ai/.well-known/oauth-authorization-server
+docs: https://login.stilla.ai/.well-known/openid-configuration
+schemes:
+  - name: OAuth2
+    source: https://api.stilla.ai/.well-known/oauth-authorization-server
+    issuer: https://login.stilla.ai
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://login.stilla.ai/oauth2/authorize
+        tokenUrl: https://login.stilla.ai/oauth2/token
+      - flow: deviceCode
+        deviceAuthorizationUrl: https://login.stilla.ai/oauth2/device_authorization
+        tokenUrl: https://login.stilla.ai/oauth2/token
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication; issue an ID token.
+    flows: [authorizationCode, deviceCode]
+  - scope: profile
+    description: Access the user's basic profile claims.
+    flows: [authorizationCode, deviceCode]
+  - scope: email
+    description: Access the user's email address.
+    flows: [authorizationCode, deviceCode]
+  - scope: offline_access
+    description: Issue a refresh token for long-lived access.
+    flows: [authorizationCode, deviceCode]
+notes: >-
+  Scopes are the standard OIDC set advertised by the WorkOS AuthKit authorization server
+  (login.stilla.ai). The MCP protected-resource metadata declares an empty
+  scopes_supported list, i.e. MCP access is authorized at the resource level rather than
+  via granular API scopes. No product-specific permission scopes are published at the
+  authorization-server level.

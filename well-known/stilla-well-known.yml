@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.stilla.ai/.well-known/
+hosts:
+  - host: https://api.stilla.ai
+    documents:
+      - path: /.well-known/oauth-authorization-server   # RFC 8414
+        status: 200
+        file: stilla-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource/mcp  # RFC 9728 (MCP protected resource)
+        status: 200
+        file: stilla-oauth-protected-resource-mcp.json
+      - path: /.well-known/security.txt                  # RFC 9116
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+  - host: https://login.stilla.ai
+    documents:
+      - path: /.well-known/openid-configuration          # OIDC discovery
+        status: 200
+        file: stilla-login-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server    # RFC 8414
+        status: 200
+  - host: https://stilla.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+notes: >-
+  Stilla exposes an OAuth 2.0 authorization-server metadata document and an RFC 9728
+  protected-resource metadata document scoped to its MCP server (api.stilla.ai/mcp).
+  The authorization server is login.stilla.ai (WorkOS AuthKit), which also publishes
+  OIDC discovery. No security.txt or ai-plugin.json is published.

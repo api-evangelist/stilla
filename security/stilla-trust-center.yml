@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+probe: false
+url: https://trust.stilla.ai/
+source: https://stilla.ai/security
+certifications:
+  - SOC 2 Type II
+  - GDPR
+  - CASA Tier 2
+controls:
+  encryption_in_transit: TLS 1.2+
+  encryption_at_rest: AES-256
+  backups: Encrypted backups across multiple geographic locations
+  sso: SAML SSO
+  provisioning: SCIM
+  access_control: Role-based permissions with full audit logs
+  data_residency: Personal data processed within the EU/EEA; in-region options for enterprise
+  model_training: Customer data is never used to train AI models (contractually enforceable)
+  penetration_testing: Regular third-party pen testing with continuous remediation
+evidence:
+  - source: https://stilla.ai/security
+    keywords: [soc 2 type ii, gdpr, casa tier 2, trust portal, scim, saml]
+  - source: https://trust.stilla.ai/
+    kind: trust-portal
+notes: >-
+  Stilla publishes a dedicated Trust Portal (trust.stilla.ai) and a security page naming
+  SOC 2 Type II (zero findings), GDPR with DPA, and Google App Defense Alliance CASA Tier 2.

@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://stilla.ai/docs
+authentication:
+  style: oauth2-bearer
+  detail: >-
+    OAuth 2.0 / OIDC via WorkOS AuthKit (login.stilla.ai). Bearer token in the
+    Authorization header; PKCE (S256) required; dynamic client registration supported.
+  see: authentication/stilla-authentication.yml
+agent_access:
+  mcp_server: https://api.stilla.ai/mcp
+  detail: >-
+    Primary programmatic surface is the remote MCP server. Clients connect over
+    streamable HTTP and authenticate via OAuth. See mcp/stilla-mcp.yml.
+integration_model:
+  # From https://stilla.ai/docs/integrations/overview
+  user_connections: Per-user OAuth/API-key connections (Linear, GitHub, Google, Notion, custom MCPs)
+  organization_channels: Org-wide @Stilla mentions in Slack, GitHub, Linear, Discord
+  triggers: Agents can be scheduled or triggered from Slack, GitHub, and Linear
+idempotency:
+  supported: unknown        # no idempotency-key contract published; API spec is gated
+pagination:
+  style: unknown            # not documented publicly; API spec is gated
+error_envelope:
+  detail: >-
+    MCP endpoint returns JSON-RPC error objects (e.g. invalid_token with error_description).
+    REST error shape not publicly documented (spec gated).
+notes: >-
+  Cross-cutting conventions captured from the public docs and live MCP/OAuth surfaces.
+  Idempotency and pagination are not publicly documented because the OpenAPI at
+  api.stilla.ai/openapi.json is behind authentication; no Idempotency pointer is emitted
+  since no idempotency contract is evidenced.

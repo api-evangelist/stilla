@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://stilla.ai/changelog
+versioning:
+  scheme: continuous       # SaaS product with a dated changelog; no public API version segment
+  docs: https://stilla.ai/changelog
+status_page: https://status.stilla.ai
+changelog: https://stilla.ai/changelog
+deprecation:
+  policy_url: null         # no published deprecation / Sunset-header policy found
+notes: >-
+  Stilla ships continuously and communicates changes via a dated public changelog and a
+  hosted status page (status.stilla.ai). No formal API deprecation policy or RFC 8594
+  Sunset/Deprecation header contract is published (product-led SaaS with a gated API).
