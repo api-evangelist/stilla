@@ -77,6 +77,8 @@ apis:
   - type: WellKnown
     url: well-known/stilla-well-known.yml
 common:
+- type: Website
+  url: https://www.stilla.ai/
 - type: DeveloperPortal
   url: https://stilla.ai/docs
 - type: Documentation
