@@ -1,38 +1,54 @@
-generated: '2026-07-21'
+generated: '2026-09-19'
 method: searched
 source: https://api.stilla.ai/.well-known/
 hosts:
-  - host: https://api.stilla.ai
-    documents:
-      - path: /.well-known/oauth-authorization-server   # RFC 8414
-        status: 200
-        file: stilla-oauth-authorization-server.json
-      - path: /.well-known/oauth-protected-resource/mcp  # RFC 9728 (MCP protected resource)
-        status: 200
-        file: stilla-oauth-protected-resource-mcp.json
-      - path: /.well-known/security.txt                  # RFC 9116
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
+- host: https://api.stilla.ai
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: stilla-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource/mcp
+    status: 200
+    file: stilla-oauth-protected-resource-mcp.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://login.stilla.ai
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: stilla-login-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: stilla-login-oauth-authorization-server.json
+    bytes: 1014
+  path_echo_control: passed
+- host: https://stilla.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+notes: Stilla exposes an OAuth 2.0 authorization-server metadata document and an RFC 9728 protected-resource
+  metadata document scoped to its MCP server (api.stilla.ai/mcp). The authorization server is login.stilla.ai
+  (WorkOS AuthKit), which also publishes OIDC discovery. No security.txt or ai-plugin.json is published.
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
   - host: https://login.stilla.ai
-    documents:
-      - path: /.well-known/openid-configuration          # OIDC discovery
-        status: 200
-        file: stilla-login-openid-configuration.json
-      - path: /.well-known/oauth-authorization-server    # RFC 8414
-        status: 200
-  - host: https://stilla.ai
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-notes: >-
-  Stilla exposes an OAuth 2.0 authorization-server metadata document and an RFC 9728
-  protected-resource metadata document scoped to its MCP server (api.stilla.ai/mcp).
-  The authorization server is login.stilla.ai (WorkOS AuthKit), which also publishes
-  OIDC discovery. No security.txt or ai-plugin.json is published.
+    path: /.well-known/oauth-authorization-server
+    file: stilla-login-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
