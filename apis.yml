@@ -87,6 +87,8 @@ apis:
   - type: WellKnown
     url: well-known/stilla-well-known.yml
 common:
+- type: Plans
+  url: plans/stilla-plans-pricing.yml
 - type: Website
   url: https://www.stilla.ai/
 - type: DeveloperPortal
