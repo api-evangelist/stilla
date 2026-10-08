@@ -1,0 +1,37 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://stilla.ai/#pricing
+sources:
+- https://stilla.ai/#pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Team
+published: true
+note: Monthly/yearly toggle (Pay yearly · Save 20%); $100 in free credits, no card required. Credit tier
+  list shown without per-tier prices.
+plan_count: 2
+currency: USD
+plans:
+- name: Team
+  price_text: $20 per org / month
+  price: 20
+  currency: USD
+  period: month
+  unit: per org
+  included_quota: 20k credits per month (credit tiers scale up to 40M credits per month); up to 29 members
+    per organization
+- name: Enterprise
+  price_text: Talk to Sales
+  period: none
+  included_quota: Everything in Team, plus unlimited members, SAML SSO & SCIM, audit logs
+rate_limit_statements:
+- Up to 29 members per organization.
