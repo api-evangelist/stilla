@@ -64,6 +64,117 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Stilla is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Stilla is an AI teammate for the whole company — an AI agent that connects to a team's tools (Slack, Microsoft Teams, GitHub, Linear, Notion, Google Workspace and 3,000+ more) and turns chats, meetings, and conversations into finished work: ads, code, reports, tasks, and documents. Team members mention @Stilla to delegate work, and reusable agents configured in natural language search across connected tools, take actions, transcribe meetings, and persist context in collaborative canvases. Stilla exposes a REST API and an official remote Model Context Protocol (MCP) server so external AI tools (Claude Code, Cursor, and other MCP clients) can access a workspace's notes, decisions, and workflow outputs. Built by the team behind Shop Pay at Shopify, Stilla is SOC 2 Type II certified, GDPR compliant, and CASA Tier 2 assessed. Backed by General Catalyst.
 
-Backed by: general-catalyst
+**Areas:** Company · Artificial Intelligence · AI Agents · Productivity · Collaboration · MCP · Automation · Developer Tools · Enterprise
+
+## Stilla on APIs.io
+
+Everything profiled for Stilla is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/stilla/](https://apis.io/providers/stilla/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Stilla API](https://apis.io/apis/stilla/stilla-api/) — Programmatic access to Stilla's capabilities. The REST API and the remote MCP server are protected by OAuth 2.0 / OIDC (WorkOS AuthKit). The OpenAPI…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [stilla](https://apis.io/servers/stilla/stilla/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Stilla Authentication](https://apis.io/security/stilla/stilla-authentication/)
+- [Stilla Domain Security](https://apis.io/security/stilla/stilla-domain-security/)
+- [Stilla Trust Center](https://apis.io/security/stilla/stilla-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Stilla Scopes](https://apis.io/scopes/stilla/stilla-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Stilla Plans Pricing](https://apis.io/plans/stilla/stilla-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.stilla.ai/)
+- [Documentation](https://stilla.ai/docs)
+- [Getting started](https://stilla.ai/docs/getting-started)
+- [Pricing](https://stilla.ai/#pricing)
+- [Sign up](https://app.stilla.ai)
+- [Support](https://stilla.ai/docs/support)
+- [Changelog](https://stilla.ai/changelog)
+- [Blog](https://stilla.ai/blog)
+- [Compliance](https://stilla.ai/security)
+- [Terms of service](https://stilla.ai/legal/terms-of-service)
+- [Privacy policy](https://stilla.ai/legal/privacy-policy)
+- [GitHub](https://github.com/stilla)
+- [Status](https://status.stilla.ai)
+
+## API Evangelist rating
+
+**Kin Score 41.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 63.2 |
+
+**Agent readiness 27.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 36.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/stilla/](https://apis.io/providers/stilla/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Stilla: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/stilla/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
